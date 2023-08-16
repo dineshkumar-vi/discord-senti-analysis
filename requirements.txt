@@ -1,0 +1,14 @@
+aiohttp==1.0.5
+async-timeout
+websockets
+discord
+discord.py
+python-dotenv
+#psycopg2==2.9.6
+pandas
+scikit-learn
+nltk
+pytest
+numpy
+transformers==4.31.0
+torch
