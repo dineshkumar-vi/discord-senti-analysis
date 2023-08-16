@@ -14,7 +14,7 @@ class MyClient(discord.Client):
 
         print("Incoming message", message.content)
         twitterR.predicte(message.content)
-        
+
         #await message.channel.send('Bot listing your message: '+ message.content)
 
 intents = discord.Intents.default()
