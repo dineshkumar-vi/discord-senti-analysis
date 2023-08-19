@@ -1,1 +1,10 @@
-/cardiffnlp/
+
+cardiffnlp/.DS_Store
+cardiffnlp/twitter-roberta-base-sentiment-latest/config.json
+cardiffnlp/twitter-roberta-base-sentiment-latest/pytorch_model.bin
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/vcs.xml
+.idea/workspace.xml

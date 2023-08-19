@@ -1,6 +1,8 @@
 import discord
 
-from sentieval.twitter_roberta import TwitterRoberta
+from sentieval.roberta import Roberta
+from sentieval.deberta import DebertaV2
+
 
 
 class MyClient(discord.Client):
@@ -13,13 +15,21 @@ class MyClient(discord.Client):
             return
 
         print("Incoming message", message.content)
-        twitterR.predicte(message.content)
+        rsafetext = roberta.predicte(message.content)
+        print("roberta sentimental analysis ")
+        dsafetext = deberta.predicte(message.content)
 
-        #await message.channel.send('Bot listing your message: '+ message.content)
+        if rsafetext != "positive" and dsafetext != "positive":
+            await message.delete()
+            await message.channel.send('Banned message')
+
+
+
 
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-twitterR: TwitterRoberta = TwitterRoberta()
+roberta: Roberta = Roberta()
+deberta: DebertaV2 = DebertaV2()
 
 client.run('MTEzOTc2MzgxMzg3MzM1Njg5MA.G_ZmRy.X0sc_HPHGDIMRh01glZQIo60kAC0BskQunZERY')
